@@ -1,0 +1,118 @@
+
+@import "variables.less";
+
+@import "mixins.less";
+
+
+.contenedor{
+
+    color: white;
+    font-family: @fontContenedor;
+
+
+    width: 99%;
+    margin: 0px auto;
+
+
+    .grid(20px, 4, auto, 4, auto);
+    
+
+    grid-template-areas:    "navbar         navbar              navbar              navbar"
+                            "titulo         titulo              titulo              titulo"
+                            "side1          info                info                side2"
+                            "side1          add                 add                 side2";
+
+    button{
+        .buttonNormal;
+        color: #000;
+    }
+
+    .infoGeneral{
+        grid-area: info;
+        .alignCenter;
+    }
+    
+
+    .add{
+        grid-area: add;
+        font-size: 1.8em;
+    }
+
+    .side1{
+        grid-area: side1;
+    }
+
+    .side2{
+        grid-area: side2;
+    }
+
+
+    .titulo2{
+        grid-area: titulo;
+        text-align: center;
+    }
+
+    .navbar{
+        grid-area: navbar;
+        background: lighten(rgba(223, 119, 0, 0.801),10%);
+        max-height: 65px;
+        color: rgb(0, 0, 0);
+        
+        *{
+            margin-right: 15px;
+        }
+        
+
+        a{
+            cursor: pointer;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            &:hover{
+                color: silver;
+            }
+        }
+
+        .titulo{
+            margin-left: 10px;
+            display:inline-block; 
+        }
+
+        .close{
+            background-color: @colorClose;
+            border-color: darken(@colorClose, 5%);
+            &:hover{
+                color: silver;
+                background-color: darken(@colorClose, 10%);
+                border-color: darken(@colorClose, 8%);
+            }
+            &:focus{
+                box-shadow: @shadowFocusClose;
+            }
+        }
+
+    }
+
+
+    input, select{
+        text-indent: 1.15em;
+        min-width: 300px;
+        min-height: 25px;
+        margin-bottom: 10px;
+        background: #959595;
+        color: white;
+        font: bold 1.5em "Verdana", Geneva, sans-serif;
+
+        &::placeholder { 
+            color: white;
+        }
+
+        border: 1px solid transparent;
+        border-color: darken(#959595, 5%);
+        border-radius: 2.5px;
+    }
+
+
+}
+
+
+.responsive;

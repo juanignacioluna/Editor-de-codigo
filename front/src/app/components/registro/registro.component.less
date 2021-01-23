@@ -1,0 +1,132 @@
+
+@import "variables.less";
+
+@import "mixins.less";
+
+
+.contenedor{
+
+    color: silver;
+    font-family: @fontContenedor;
+
+
+    width: 99%;
+    margin: 0px auto;
+
+
+    .grid(20px, 4, auto, 3, auto);
+    
+
+    grid-template-areas:    "navbar         navbar              navbar              navbar"
+                            "titulo         titulo              titulo              titulo"
+                            "side1         registro               registro              side2";
+
+    button{
+        .buttonNormal;
+        color: #000000;
+    }
+
+    .side1{
+        grid-area: side1;
+    }
+
+    .registro{
+        grid-area: registro;
+        text-align: center;
+
+        button{
+            font-size: 1.7em;
+        }
+
+        .login{
+            font-size: 1.2em;
+            &:active{
+                box-shadow: @shadowActiveSelect;
+            
+            }
+            color: #fff;
+            background-color: darken(rgba(223, 119, 0, 0.801), 2%);
+            border-color: darken(darken(rgba(223, 119, 0, 0.801), 2%), 5%);
+            &:hover{
+                color: #fff;
+                background-color: darken(darken(rgba(223, 119, 0, 0.801), 2%), 10%);
+                border-color: darken(darken(rgba(223, 119, 0, 0.801), 2%), 8%);
+            }
+            &:focus{
+                box-shadow: @niceShadow;
+            }
+        }
+
+        input{
+            text-indent: 1.15em;
+            min-width: 600px;
+            min-height: 45px;
+            margin-bottom: 10px;
+            background: #959595;
+            color: white;
+            font: bold 1.5em "Verdana", Geneva, sans-serif;
+    
+            &::placeholder { 
+                color: white;
+            }
+    
+            border: 1px solid transparent;
+            border-color: darken(#959595, 5%);
+            border-radius: 2.5px;
+        }
+    }
+
+    .side2{
+        grid-area: side2;
+    }
+
+    .titulo2{
+        grid-area: titulo;
+        text-align: center;
+    }
+
+    .navbar{
+        grid-area: navbar;
+        background: lighten(rgba(223, 119, 0, 0.801),10%);
+        max-height: 65px;
+        color: rgb(0, 0, 0);
+        
+        *{
+            margin-right: 15px;
+        }
+        
+
+        a{
+            cursor: pointer;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            &:hover{
+                color: silver;
+            }
+        }
+
+        .titulo{
+            margin-left: 10px;
+            display:inline-block; 
+        }
+
+        .close{
+            background-color: @colorClose;
+            border-color: darken(@colorClose, 5%);
+            &:hover{
+                color: silver;
+                background-color: darken(@colorClose, 10%);
+                border-color: darken(@colorClose, 8%);
+            }
+            &:focus{
+                box-shadow: @shadowFocusClose;
+            }
+        }
+
+    }
+
+
+}
+
+
+.responsive;

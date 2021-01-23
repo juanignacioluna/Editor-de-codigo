@@ -1,0 +1,32 @@
+
+
+  <div class="contenedor">
+
+
+    <header class="navbar">
+
+      <h3 class="titulo">Editor de código</h3>
+
+      <a>Inicio</a>
+
+      <a (click)="misArchivos($event)">Mis archivos</a>
+
+      <button (click)="login($event)" id="login">Iniciar Sesión</button>
+
+      <button (click)="cerrarSesion($event)" class="close" id="close">Cerrar Sesión</button>
+
+    </header>
+
+    <main class="bienvenido">
+
+      <h1>Bienvenido al editor de código <i>{{userSession}}</i></h1>
+
+      <h4>Este sitio web te ayuda a editar tus propios archivos en simples pasos :)</h4>
+
+      <button (click)="misArchivos($event)">Ver mis archivos</button>
+
+    </main>
+  
+  
+  
+  </div>

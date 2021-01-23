@@ -1,0 +1,52 @@
+
+
+  <div class="contenedor">
+
+
+    <header class="navbar">
+
+      <h3 class="titulo">Editor de código</h3>
+
+      <a (click)="home($event)">Inicio</a>
+
+      <a (click)="misArchivos($event)">Mis archivos</a>
+
+      <button (click)="login($event)" id="login">Iniciar Sesión</button>
+
+      <button (click)="cerrarSesion($event)" class="close" id="close">Cerrar Sesión</button>
+
+    </header>
+
+
+    
+
+
+          <h1 class="titulo2">Registro</h1>
+
+
+          <div class="registro">
+
+              <input id="user" type="text" name="user" placeholder="User">
+
+              <br>
+
+              <input id="password" type="password" name="password" placeholder="Password">
+
+              <br> <br>
+
+              <button (click)="registro($event)">Registrarse</button>
+
+              <br> <br>
+
+              <button class="login" (click)="login($event)">Iniciar Sesión</button>
+
+          </div>
+
+          <div class="side1"></div>
+
+          <div class="side2"></div>
+    
+      
+  
+  
+  </div>

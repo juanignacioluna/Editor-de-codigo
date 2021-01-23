@@ -1,0 +1,118 @@
+.grid(@gap, @col1, @col2, @row1, @row2){
+
+
+    display: grid;
+    grid-gap: @gap;
+
+    grid-template-columns: repeat(@col1, @col2);
+
+    grid-template-rows: repeat(@row1, @row2);
+
+
+
+}
+
+
+.alignCenter{
+    justify-self: center;
+    align-self: center;
+}
+
+.buttonNormal{
+    a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    margin-bottom: 0;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    &:focus,
+    &:active:focus{
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+
+    &:hover,
+    &:focus{
+            color: #333;
+            text-decoration: none;
+        
+        }
+    &:active{
+            background-image: none;
+            outline: 0;
+            box-shadow: @shadowActiveSelect;
+        
+        }
+            
+    width: auto;
+    min-height: 20px;
+    color: rgb(0, 0, 0);
+    background-color: #f2f2f2;
+    border-color: darken(#f2f2f2, 5%);
+    border-radius: 2.5px;
+    &:hover{
+        background-color: darken(#f2f2f2, 10%);
+        border-color: darken(#f2f2f2, 8%);
+    }
+
+    &:focus{
+        box-shadow: @shadowFocusSelect;
+    }
+
+
+    font: @fontNavbarBTN;
+}
+
+
+.responsive{
+
+    @media screen and (max-width: 960px){
+
+        .contenedor{
+
+                font-size: 0.9em;
+
+    
+        }
+    
+    }
+
+    @media screen and (max-width: 750px){
+
+        .contenedor{
+
+            .grid(20px, 3, auto, 5, auto);
+    
+
+            grid-template-areas:    "navbar         navbar              navbar              navbar"
+                                    "titulo         titulo              titulo              titulo"
+                                    "side1          info                info                side2"
+                                    "fila          fila                 fila                 fila"
+                                    "side1          add                 add                 side2";
+
+
+            .fila{
+                *{
+                    font-size: 0.9em;
+                    min-width: 10px;
+                }
+                
+            }
+
+    
+        }
+    
+    }
+
+
+}

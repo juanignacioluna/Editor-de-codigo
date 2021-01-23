@@ -1,0 +1,53 @@
+
+
+  <div class="contenedor">
+
+
+    <header class="navbar">
+
+      <h3 class="titulo">Editor de código</h3>
+
+      <a (click)="home($event)">Inicio</a>
+
+      <a (click)="misArchivos($event)">Mis archivos</a>
+
+      <button (click)="login($event)" id="login">Iniciar Sesión</button>
+
+      <button (click)="cerrarSesion($event)" class="close" id="close">Cerrar Sesión</button>
+
+    </header>
+
+
+    
+
+
+      <h1 class="titulo2">Agregar nuevo archivo</h1>
+
+      <div class="infoGeneral">
+
+          <h3>No utilizar eñes, ni caracteres especiales.</h3>
+
+          <br> <br>
+
+          <input id="nombre" type="text" placeholder="Nombre del archivo">
+
+          <br> <br>
+      
+          <select id="tipos">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Javascript">Javascript</option>
+          </select>
+
+      </div>
+
+      <button (click)="add($event)" class="add">Crear</button>
+
+
+      <div class="side1"></div>
+
+      <div class="side2"></div>
+
+  
+  
+  </div>

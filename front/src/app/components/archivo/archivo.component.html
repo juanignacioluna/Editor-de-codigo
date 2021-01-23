@@ -1,0 +1,35 @@
+
+
+  <div class="contenedor">
+
+    <header class="navbar">
+
+      <h3 class="titulo">Editor de código</h3>
+
+      <a (click)="home($event)">Inicio</a>
+
+      <a (click)="misArchivos($event)">Mis archivos</a>
+
+      <button (click)="login($event)" id="login">Iniciar Sesión</button>
+
+      <button (click)="cerrarSesion($event)" class="close" id="close">Cerrar Sesión</button>
+
+    </header>
+    
+
+          <h1 class="titulo2">{{info['nombre']}}.{{tipo}}</h1>
+
+          <div id="code"></div>
+
+          <div id="side1"></div>
+
+          <div id="side2"></div>
+
+          <button (click)="editar($event)" class="editar">Guardar cambios</button>
+
+          <button (click)="borrar($event)" class="borrar">Eliminar</button>
+
+          
+
+
+  </div>
